@@ -82,3 +82,41 @@ for i in range(1, 10):
         print(f'{i}*{j}={i * j}', end='\t')
     print()
 print时用了f-string的方法，输出乘法表中的每个元素，例如，如果 i 是 2，j 是 3，那么它会输出类似于 "2*3=6" 的字符串，并使用制表符 ('\t') 来分隔不同的元素。
+
+
+第七课 条件与循环综合使用
+
+#CRAPS赌博游戏：CRAPS又称花旗骰，是美国拉斯维加斯非常受欢迎的一种的桌上赌博游戏。该游戏使用两粒骰子，玩家通过摇两粒骰子获得点数进行游戏。
+#简化后的规则是：玩家第一次摇骰子如果摇出了7点或11点，玩家胜；玩家第一次如果摇出2点、3点或12点，庄家胜；
+#玩家如果摇出其他点数则玩家继续摇骰子，如果玩家摇出了7点，庄家胜；如果玩家摇出了第一次摇的点数，玩家胜；其他点数玩家继续摇骰子，直到分出胜负。
+
+import random
+dice1 = random.randint(1,6)
+dice2 = random.randint(1,6)
+sum = dice2 + dice1
+print(dice1,dice2)
+if dice1 + dice2 == 7 or dice1 + dice2 == 11:
+    print('gamer win')
+elif dice1 + dice2 ==2 or dice1 + dice2 ==3 or dice1 + dice2 ==12:
+    print('boss win')
+else:
+    go_on = True
+    print('continue game')
+while go_on:
+    dice1 = random.randint(1, 6)
+    dice2 = random.randint(1, 6)
+    print(dice1, dice2)
+    if dice1 + dice2 == 7:
+        print('boss win')
+        go_on = False
+    elif dice1 + dice2 == sum:
+        print('gamer win')
+        go_on = False
+    else:
+        print('continue')
+
+
+
+
+
+
