@@ -1,0 +1,63 @@
+8.24
+
+第八课 数据结构:列表list
+
+在Python中，列表是由一系元素按特定顺序构成的数据序列，这样就意味着定义一个列表类型的变量，可以保存多个数据，而且允许有重复的数据。
+在Python中，可以使用[]字面量语法来定义列表，列表中的多个元素用逗号进行分隔，代码如下所示。
+
+items1 = [35, 12, 99, 68, 55, 87]
+items2 = ['Python', 'Java', 'Go', 'Kotlin']
+
+还有list函数，将其他序列变成列表：
+
+items1 = list(range(1, 10))
+print(items1)    # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+items2 = list('hello')
+print(items2)    # ['h', 'e', 'l', 'l', 'o']
+
+列表是一种可变数据类型，也就是说列表可以添加元素、删除元素、更新元素
+
+# 列表的成员运算
+print(100 in items3)        # False
+print('hello' in items4)    # True
+
+# 列表的索引
+print(items3[0], items3[-size])        # 35 35
+items3[-1] = 100
+print(items3[size - 1], items3[-1])    # 100 100
+
+# 列表的切片
+print(items3[:5])          # [35, 12, 99, 68, 55]
+print(items3[4:])          # [55, 87, 45, 8, 100]
+print(items3[-5:-7:-1])    # [55, 68]
+print(items3[::-2])        # [100, 45, 55, 99, 35] 
+
+列表的切片为左闭右开区间，即可以取到左边的索引范围，但取不到右边索引的范围。
+
+遍历列表中的元素，两个方法：
+1.for循环
+
+items = ['Python', 'Java', 'Go', 'Kotlin']
+for x in range(0,len(items)):
+    item = items[x]
+    print(item)
+
+2.直接写
+
+items = ['Python', 'Java', 'Go', 'Kotlin']
+
+for item in items:
+    print(item)
+
+改进后的摇色子代码：
+
+import random
+counter = [0]*6
+for x in range(6000):
+    dice = random.randint(1,6)
+    counter[dice-1]+=1
+for a in counter:
+    print(a)
+
+
+
