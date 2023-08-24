@@ -60,4 +60,37 @@ for a in counter:
     print(a)
 
 
+列表中的方法：！！
 
+添加和删除元素：
+添加append 插入insert 删除指定remove 删除索引位置pop 清空clear
+
+还可以使用del删除对应索引的元素，性能上略优
+
+count查询出现次数，index查询元素对应的索引
+
+元素的排序sort和反转reverse
+
+
+通过生成式创建列表：
+
+通过生成式创建列表。
+
+# 创建一个由1到9的数字构成的列表
+items1 = [x for x in range(1, 10)]
+print(items1)    # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# 创建一个由'hello world'中除空格和元音字母外的字符构成的列表
+items2 = [x for x in 'hello world' if x not in ' aeiou']
+print(items2)    # ['h', 'l', 'l', 'w', 'r', 'l', 'd']
+
+# 创建一个由个两个字符串中字符的笛卡尔积构成的列表
+items3 = [x + y for x in 'ABC' for y in '12']
+print(items3)    # ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
+记住“强烈建议用生成式语法来创建列表”这个结论就可以了。
+
+嵌套列表的创建方式：
+scores = [[0] * 3 for _ in range(5)]
+scores[0][0] = 95
+print(scores)
+# [[95, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]
